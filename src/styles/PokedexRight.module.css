@@ -1,6 +1,5 @@
 .rightSide {
     position: relative;
-    
 }
 
 .imgPokedex {
@@ -10,17 +9,27 @@
     box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
+.imgVisor {
+    position: absolute;
+    left: 54px;
+    height: 260px;
+    width: 256px;
+    height: 270px;
+    top: 140px;
+    border-radius: 8px
+}
+
 .contentBox {
     position: absolute;
     width: 250px;
-    left: 67px;
+    left: 57px;
     top: 99.7px
 }
 
 .searchBox {
     display: flex;
     gap: 10px;
-    max-width: 8vh
+    width: 8vh
 }
 
 .searchBox button{
@@ -28,6 +37,7 @@
     border-radius: 4px;
     border: none;
     box-shadow: -1.5px 2px #888, -2.5px 3px 0 #333;
+    cursor: pointer
 }
 
 .searchBox input{
@@ -39,6 +49,41 @@
     box-shadow: -1px 2px #888, -2px 3px 0 #333;
 }
 
-.allPokemonsBox {
+.pokemonsBox {
+    margin-top: 25px;
+    margin-left: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 226.5px;
+}
+
+.card {
+    text-align: center;
+    height: 85px;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(255,255,255,1);
+    box-shadow: 0px 0px 12px 0px rgba(255,255,255,1);
+    cursor: pointer;
+}
+
+.card img{
+    max-height: 40px;
+    margin-top: 9px;
     
+}
+
+.pokemonsButtons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pokemonsButtons button {
+    height: 30px;
+    width: 50px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: -1.5px 2px #888, -2.5px 3px 0 #333;
+    cursor: pointer;
+    padding-top: 3px
 }
