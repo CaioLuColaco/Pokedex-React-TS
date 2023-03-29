@@ -1,0 +1,10 @@
+.leftSide {
+    position: relative;
+}
+
+.imgPokedex {
+    border-radius: 30px 10px 10px 30px;
+    -webkit-box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+}
