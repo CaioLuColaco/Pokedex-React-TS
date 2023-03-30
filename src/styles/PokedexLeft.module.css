@@ -12,6 +12,13 @@
 .pokemonName {
     position: absolute;
     bottom: 205px;
-    left: 63px;
+    left: 60px;
     color: gray
 }  
+
+.pokemonImg {
+    position: absolute;
+    left: 100px;
+    bottom: 260px;
+    height: 90px
+}
