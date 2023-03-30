@@ -3,6 +3,7 @@ import styles from '@/styles/Home.module.css'
 import PokedexLeft from '../../components/PokedexLeft'
 import PokedexRight from '../../components/PokedexRight'
 import { useState } from 'react'
+import Navbar from '../../components/navbar'
 
 export default function Home() {
   const [selectedPokemon, setSelectedPokemon] = useState("")
@@ -16,9 +17,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
       </Head>
-      <main className={styles.main}>
+      <main>
+        <img src="/fundoPikachu.png" alt="" className={styles.fundo}/>
+        <div className={styles.container}>
           <PokedexLeft selectedPokemon={selectedPokemon}/>
           <PokedexRight setSelectedPokemon={setSelectedPokemon}/>
+        </div>
       </main>
     </>
   )
