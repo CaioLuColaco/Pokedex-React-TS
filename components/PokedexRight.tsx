@@ -9,6 +9,7 @@ export default function PokedexRight(props: any) {
     const [pokemons, setPokemons] = useState<any>([])
     const [currentPage, setCurrentPage] = useState(0)
     const [isLoading, setIsLoading] = useState(false)
+    const [searchedPokemon, setSearchedPokemon] = useState("")
 
     useEffect(() => {
         async function getPokemons() {
@@ -30,6 +31,12 @@ export default function PokedexRight(props: any) {
         setIsLoading(true)
     }, [pokemons])
 
+    const searchPokemon = async () => {
+        await pokeApi.get(`/pokemon/${searchedPokemon}`).then(response => {
+            setSelectedPokemon(response.data.name)
+        }).catch((error) => console.log(error))
+    }
+
     return (
         <div className={styles.rightSide}>
             <img src="/pokedexRight.png" alt="Parte 2 do pokedex" className={styles.imgPokedex}/>
@@ -38,8 +45,8 @@ export default function PokedexRight(props: any) {
 
             <div className={styles.contentBox}>
                 <div className={styles.searchBox}>
-                    <input type="text" />
-                    <button>search</button>
+                    <input type="text" onChange={(e) => setSearchedPokemon(e.target.value)}/>
+                    <button onClick={() => searchPokemon()}>search</button>
                 </div>
 
                 <div className={styles.pokemonsBox}>
