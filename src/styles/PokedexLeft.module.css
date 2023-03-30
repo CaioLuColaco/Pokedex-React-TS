@@ -8,3 +8,10 @@
     -moz-box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
 }
+
+.pokemonName {
+    position: absolute;
+    bottom: 205px;
+    left: 63px;
+    color: gray
+}  

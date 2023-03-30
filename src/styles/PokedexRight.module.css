@@ -12,9 +12,8 @@
 .imgVisor {
     position: absolute;
     left: 54px;
-    height: 260px;
     width: 256px;
-    height: 270px;
+    height: 273px;
     top: 140px;
     border-radius: 8px
 }
@@ -67,10 +66,13 @@
     font-size: 14px
 }
 
+.card:hover {
+    background-color: #90ee90;
+}
+
 .card img{
     max-height: 40px;
     margin-top: 9px;
-    
 }
 
 .pokemonsButtons {

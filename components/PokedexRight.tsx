@@ -3,6 +3,9 @@ import styles from "@/styles/PokedexRight.module.css"
 import React, { useEffect, useState } from "react"
 
 export default function PokedexRight(props: any) {
+
+    const {setSelectedPokemon} = props
+
     const [pokemons, setPokemons] = useState<any>([])
     const [currentPage, setCurrentPage] = useState(0)
     const [isLoading, setIsLoading] = useState(false)
@@ -43,7 +46,7 @@ export default function PokedexRight(props: any) {
 
                     {isLoading && pokemons.map((pokemon: any) => {
                         return (
-                            <div className={styles.card} key={pokemon.name}>
+                            <div className={styles.card} key={pokemon.name} onClick={() => setSelectedPokemon(`${pokemon.name}`)}>
                                 <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.id}.gif`} alt="" />
                                 <p>{pokemon.name}</p>
                             </div>

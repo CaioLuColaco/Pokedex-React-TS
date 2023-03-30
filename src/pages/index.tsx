@@ -5,8 +5,7 @@ import PokedexRight from '../../components/PokedexRight'
 import { useState } from 'react'
 
 export default function Home() {
-  const [pokemonName, SetPokemonName] = useState("")
-
+  const [selectedPokemon, setSelectedPokemon] = useState("")
 
   return (
     <>
@@ -18,8 +17,8 @@ export default function Home() {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
       </Head>
       <main className={styles.main}>
-          <PokedexLeft pokemon={pokemonName}/>
-          <PokedexRight/>
+          <PokedexLeft selectedPokemon={selectedPokemon}/>
+          <PokedexRight setSelectedPokemon={setSelectedPokemon}/>
       </main>
     </>
   )
