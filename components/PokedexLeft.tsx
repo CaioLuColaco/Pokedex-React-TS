@@ -34,19 +34,19 @@ export default function PokedexLeft(props: any) {
 
                 <div className={styles.habilities}>
                     <div className={styles.hability}>
-                        <p>HP</p>
+                        <p>{pokemonData.stats? pokemonData.stats[0].stat.name : ""}</p>
                         <p>{pokemonData.stats? pokemonData.stats[0].base_stat : ""}</p>
                     </div>
                     <div className={styles.hability}>
-                        <p>ATTACK</p>
+                        <p>{pokemonData.stats? pokemonData.stats[1].stat.name : ""}</p>
                         <p>{pokemonData.stats? pokemonData.stats[1].base_stat : ""}</p>
                     </div>
                     <div className={styles.hability}>
-                        <p>DEFENSE</p>
+                        <p>{pokemonData.stats? pokemonData.stats[2].stat.name : ""}</p>
                         <p>{pokemonData.stats? pokemonData.stats[2].base_stat : ""}</p>
                     </div>
                     <div className={styles.hability}>
-                        <p>SPEED</p>
+                        <p>{pokemonData.stats? pokemonData.stats[5].stat.name : ""}</p>
                         <p>{pokemonData.stats? pokemonData.stats[5].base_stat : ""}</p>
                     </div>
                 </div>
