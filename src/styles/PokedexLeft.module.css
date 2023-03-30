@@ -22,3 +22,24 @@
     bottom: 260px;
     height: 90px
 }
+
+.visorH {
+    position: absolute;
+    left: 25px;
+    bottom: 50px;
+    width: 250px;
+    height: 130px;
+    border-radius: 8px;
+    box-shadow: -2px 3px #888, -3px 5px 0 #333;
+}
+
+.habilities {
+    position: absolute;
+    left: 25px;
+    bottom: 50px;
+    width: 250px;
+    height: 130px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 10px;
+}

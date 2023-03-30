@@ -5,17 +5,18 @@ import pokeApi from "../services/pokeApi"
 export default function PokedexLeft(props: any) {
     const { selectedPokemon } = props
     const [pokemonData, setPokemonData] = useState<any>([])
+    const [habilities, setHabilities] = useState<any>([])
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
         setIsLoading(true)
-        // console.log(pokemonData.types[0].type.name)
     }, [pokemonData])
 
     useEffect(() => {
         async function getPokemons() {
             await pokeApi.get(`/pokemon/${selectedPokemon}`).then(response => {
                 setPokemonData(response.data)
+                setHabilities(response.data.stats)
             })
         }
 
@@ -30,6 +31,27 @@ export default function PokedexLeft(props: any) {
                 <h3 className={styles.pokemonName}>{`${pokemonData.id==undefined? "" : pokemonData.id + " - "}${selectedPokemon}`}</h3>
                 
                 <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemonData.id}.gif`} alt="" className={styles.pokemonImg}/>
+
+                <img src="/visorH.png" alt="Visor de habilidades" className={styles.visorH}/>
+
+                <div className={styles.habilities}>
+                    <div className={styles.hability}>
+                        <p>HP</p>
+                        <p>{pokemonData.stats? pokemonData.stats[0].base_stat : ""}</p>
+                    </div>
+                    <div className={styles.hability}>
+                        <p>ATTACK</p>
+                        <p>{pokemonData.stats? pokemonData.stats[1].base_stat : ""}</p>
+                    </div>
+                    <div className={styles.hability}>
+                        <p>DEFENSE</p>
+                        <p>{pokemonData.stats? pokemonData.stats[2].base_stat : ""}</p>
+                    </div>
+                    <div className={styles.hability}>
+                        <p>SPEED</p>
+                        <p>{pokemonData.stats? pokemonData.stats[5].base_stat : ""}</p>
+                    </div>
+                </div>
             
             </>
             }
