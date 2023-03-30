@@ -64,6 +64,7 @@
     -moz-box-shadow: 0px 0px 12px 0px rgba(255,255,255,1);
     box-shadow: 0px 0px 12px 0px rgba(255,255,255,1);
     cursor: pointer;
+    font-size: 14px
 }
 
 .card img{
@@ -86,4 +87,8 @@
     box-shadow: -1.5px 2px #888, -2.5px 3px 0 #333;
     cursor: pointer;
     padding-top: 3px
+}
+
+.pokemonsButtons button:active {
+    box-shadow: 1.5px -2px #888, 2.5px -3px 0 #333;
 }
