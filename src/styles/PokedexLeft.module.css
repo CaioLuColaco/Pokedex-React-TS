@@ -1,5 +1,7 @@
 .leftSide {
     position: relative;
+    max-width: 334px;
+    z-index: 3
 }
 
 .imgPokedex {

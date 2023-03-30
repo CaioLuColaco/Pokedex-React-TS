@@ -8,13 +8,13 @@
 }
 
 body {
-  background-image: linear-gradient(to right top, #ff3d00, #fb3709, #f63011, #f22a16, #ed231a, #ea221a, #e82019, #e51f19, #e32314, #e1260e, #df2907, #dd2c00);
+  background-color: #952028;
   min-height: 100vh;
-  text-align: center
+  text-align: center;
+  
 }
 
 main{
   display: inline-block;
-  margin-top: 2%
 }
 
