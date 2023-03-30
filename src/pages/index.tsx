@@ -3,7 +3,6 @@ import styles from '@/styles/Home.module.css'
 import PokedexLeft from '../../components/PokedexLeft'
 import PokedexRight from '../../components/PokedexRight'
 import { useState } from 'react'
-import Navbar from '../../components/navbar'
 
 export default function Home() {
   const [selectedPokemon, setSelectedPokemon] = useState("")
