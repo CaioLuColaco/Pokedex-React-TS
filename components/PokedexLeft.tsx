@@ -5,7 +5,6 @@ import pokeApi from "../services/pokeApi"
 export default function PokedexLeft(props: any) {
     const { selectedPokemon } = props
     const [pokemonData, setPokemonData] = useState<any>([])
-    const [habilities, setHabilities] = useState<any>([])
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
@@ -16,7 +15,6 @@ export default function PokedexLeft(props: any) {
         async function getPokemons() {
             await pokeApi.get(`/pokemon/${selectedPokemon}`).then(response => {
                 setPokemonData(response.data)
-                setHabilities(response.data.stats)
             })
         }
 
